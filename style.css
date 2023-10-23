@@ -29,6 +29,7 @@ a {
   font-weight: bold;
   white-space: nowrap;
   text-align: center;
+  cursor: pointer;
 }
 .btn-primary {
   color: white;
@@ -70,6 +71,7 @@ a {
 }
 .nav-logo > img {
   width: 80%;
+  cursor: pointer;
 }
 .nav-menu-container {
   position: relative;
@@ -78,6 +80,7 @@ a {
 .nav-menu {
   color: white;
   display: none;
+  cursor: pointer;
   /* position: relative; */
 }
 .nav-lists {
@@ -93,6 +96,7 @@ a {
   color: white;
   border: none;
   font-size: 14px;
+  cursor: pointer;
 }
 .nav-right {
   display: flex;
@@ -107,6 +111,7 @@ a {
 .user-pf > img {
   width: 100%;
   border-radius: 3px;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .nav-menu {
@@ -162,6 +167,7 @@ a {
 }
 .title-logo > img {
   width: 100%;
+  cursor: pointer;
 }
 .hero-desc {
   color: white;
@@ -173,6 +179,7 @@ a {
   /* white-space: nowrap; */
   overflow: hidden;
   padding: 1rem 0;
+  cursor: pointer;
 }
 .hero-btn {
   display: flex;
@@ -183,25 +190,58 @@ a {
 
 /* main section */
 .row-container {
+  padding-left: 3rem;
   background-color: rgb(0, 0, 0);
+}
+.row-section {
+  white-space: nowrap;
 }
 .row-heading {
   font-size: 1.5rem;
   padding: 1rem 0;
   color: white;
+  cursor: pointer;
+  display: block;
 }
-.grid-1x6 {
-  display: grid;
+.row-slide {
+  overflow-x: scroll;
+}
+.card-container {
+  /* display: grid;
   gap: 0.5rem;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr); */
+  display: inline-block;
+  max-width: 15%;
+  padding: 1rem 0;
+}
+.row-slide::-webkit-scrollbar {
+  display: none;
 }
 .row-card {
   width: 100%;
   border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 5px;
 }
 .row-card > img {
   border-radius: 4px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
+}
+.row-card:hover > img {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+@media screen and (max-width: 1080px) {
+  .card-container {
+    max-width: 20%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-container {
+    max-width: 40%;
+  }
 }
