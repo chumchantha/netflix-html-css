@@ -22,10 +22,10 @@ a {
   padding: 0 3rem;
 }
 .btn {
-  padding: 10px 50px;
+  padding: 15px 60px;
   background-color: white;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: bold;
   white-space: nowrap;
 }
@@ -101,35 +101,45 @@ a {
   background-image: url(/src/backdrop/13.jpg);
   background-position: 50%;
   background-size: cover;
-}
-.hero-container {
-  padding-top: 10rem;
   min-height: 56.25vw;
   display: flex;
-  max-width: 50%;
-  flex-direction: column;
-  justify-content: flex-start;
+  position: relative;
+}
+.hero-left {
+  width: 80%;
   background: linear-gradient(77deg, rgba(0, 0, 0, 0.6), transparent 85%);
 }
+.hero-container {
+  position: absolute;
+  bottom: 35%;
+  display: flex;
+  width: 36%;
+  /* height: 65%; */
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 4%;
+  /* top: 0; */
+}
 .title-logo {
-  max-width: 450px;
+  max-width: 100%;
 }
 .title-logo > img {
   width: 100%;
 }
 .hero-desc {
   color: white;
-  font-size: 14px;
+  font-size: 18px;
   margin: 0.5rem 0;
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  /* max-width: 100%;
+  white-space: nowrap; */
 }
 .hero-btn {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
+  line-height: 88%;
+  margin-top: 1.5vw;
 }
 /* end of hero section */
 
@@ -145,8 +155,11 @@ a {
 }
 .row-card {
   width: 100%;
+  border-radius: 4px;
 }
 .row-card > img {
   border-radius: 4px;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
