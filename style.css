@@ -240,9 +240,19 @@ a {
   transform: scale(1.04);
   transition: all 0.1s;
 }
+@media screen and (max-width: 1080px) {
+  .card-img {
+    max-width: 25%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card-img {
+    max-width: 30%;
+  }
+}
 @media screen and (max-width: 900px) {
   .card-img {
-    max-width: 20%;
+    max-width: 35%;
   }
   .card-container {
     gap: 0.4rem;
@@ -250,9 +260,14 @@ a {
 }
 @media screen and (max-width: 768px) {
   .card-img {
-    max-width: 25%;
+    max-width: 40%;
   }
   .card-container {
     gap: 0.3rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .card-img {
+    max-width: 60%;
   }
 }
