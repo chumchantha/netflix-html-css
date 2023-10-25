@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- navigation bar -->
-    <header class="top-page">
+    <header class="top-page .nav-scrolled">
       <nav class="nav-container container-width">
         <div class="nav-left">
           <div class="nav-logo">
@@ -145,6 +145,113 @@
           </div>
         </div>
       </section>
+      <section class="row-section">
+        <h2 class="row-heading container-width">Only on Netflix</h2>
+        <div class="row-slide">
+          <div class="card-container">
+            <img class="card-img" src="/src/backdrop/13.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/14.jpeg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/12.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/6.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/16.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/11.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/2.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/8.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/10.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/9.jpg" alt="card img" />
+          </div>
+        </div>
+      </section>
+      <section class="row-section">
+        <h2 class="row-heading container-width">Trending</h2>
+        <div class="row-slide">
+          <div class="card-container">
+            <img class="card-img" src="/src/backdrop/13.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/14.jpeg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/12.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/6.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/16.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/11.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/2.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/8.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/10.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/9.jpg" alt="card img" />
+          </div>
+        </div>
+      </section>
+      <section class="row-section">
+        <h2 class="row-heading container-width">Popular</h2>
+        <div class="row-slide">
+          <div class="card-container">
+            <img class="card-img" src="/src/backdrop/13.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/14.jpeg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/12.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/6.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/16.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/11.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/2.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/8.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/10.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/9.jpg" alt="card img" />
+          </div>
+        </div>
+      </section>
+      <section class="row-section">
+        <h2 class="row-heading container-width">TV Shows</h2>
+        <div class="row-slide">
+          <div class="card-container">
+            <img class="card-img" src="/src/backdrop/13.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/14.jpeg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/12.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/6.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/16.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/11.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/2.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/8.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/10.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/9.jpg" alt="card img" />
+          </div>
+        </div>
+      </section>
+      <section class="row-section">
+        <h2 class="row-heading container-width">Movies</h2>
+        <div class="row-slide">
+          <div class="card-container">
+            <img class="card-img" src="/src/backdrop/13.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/14.jpeg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/12.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/6.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/16.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/11.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/2.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/8.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/10.jpg" alt="card img" />
+            <img class="card-img" src="/src/backdrop/9.jpg" alt="card img" />
+          </div>
+        </div>
+      </section>
     </main>
+    <!-- end of main section -->
+
+    <script>
+      function getScrollPosition() {
+        return (
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop ||
+          0
+        );
+      }
+
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector(".top-page"); // select the navbar element
+        const scrollPos = getScrollPosition(); // get the cross-browser scroll position
+        if (scrollPos > 0) {
+          nav.classList.add("nav-scrolled"); // add the scrolled class if scrolled
+        } else {
+          nav.classList.remove("nav-scrolled"); // remove the scrolled class if not scrolled
+        }
+      });
+    </script>
   </body>
 </html>
