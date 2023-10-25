@@ -10,6 +10,8 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  height: 300vh;
+  background-color: rgb(0, 0, 0);
 }
 ul {
   list-style-type: none;
@@ -19,25 +21,29 @@ a {
 }
 
 .container-width {
-  max-width: 1120px;
-  margin: 0 auto;
+  padding: 0 2.5vw;
 }
 .btn {
-  padding: 5px 0;
+  /* padding: 1vw 2vw; */
   background-color: white;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 1vw;
   font-weight: bold;
   white-space: nowrap;
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  height: 2vw;
 }
 .btn-primary {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .btn-block {
-  min-width: 35%;
+  /* min-width: 35%; */
+  width: 8vw;
 }
 
 /* navigation bar */
@@ -82,6 +88,7 @@ a {
   color: white;
   display: none;
   cursor: pointer;
+  /* font-size: 1.5vw; */
   /* position: relative; */
 }
 .nav-lists {
@@ -96,7 +103,7 @@ a {
   list-style-type: none;
   color: white;
   border: none;
-  font-size: 14px;
+  font-size: 1.2vw;
   cursor: pointer;
 }
 .nav-right {
@@ -123,19 +130,22 @@ a {
   }
   .nav-menu-container:hover .nav-lists {
     opacity: 1;
+    transition: opacity 0.2s;
   }
   .nav-lists {
     opacity: 0;
-    transition: opacity 0.2s;
     pointer-events: none;
     flex-direction: column;
     position: absolute;
-    padding: 1rem 0;
-    left: -3rem;
+    padding: 10px 0;
+    left: -5vw;
     border-radius: 5px;
-    margin-top: 0.5rem;
+    margin-top: 0.5vw;
     white-space: nowrap;
     background-color: rgba(0, 0, 0, 0.8);
+  }
+  .nav-links > a {
+    font-size: 2vw;
   }
 }
 /* end of navigation bar */
@@ -145,107 +155,104 @@ a {
   background-image: url(/src/backdrop/13.jpg);
   background-position: 50%;
   background-size: cover;
-  height: 56.25vw;
+  height: 50vw;
   display: flex;
-  position: relative;
+  margin-bottom: 1vw;
 }
 .hero-left {
   max-width: 80%;
   background: linear-gradient(77deg, rgba(0, 0, 0, 0.6), transparent 85%);
 }
 .hero-container {
-  position: absolute;
-  bottom: 25%;
+  /* position: absolute; */
+  /* bottom: 25%; */
   display: flex;
-  width: 36%;
-  /* height: 65%; */
+  max-width: 50%;
+  height: 80%;
   flex-direction: column;
-  justify-content: space-between;
-  margin-left: 3rem;
+  justify-content: flex-end;
+  /* margin-left: 3rem; */
 }
 .title-logo {
   max-width: 100%;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
 }
 .title-logo > img {
-  width: 85%;
+  width: 100%;
   cursor: pointer;
 }
 .hero-desc {
   color: white;
-  font-size: 18px;
-  margin-bottom: 2rem;
-  text-align: justify;
-  /* max-width: 100%; */
-  max-height: 100px;
-  overflow: hidden;
+  font-size: 1vw;
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+  max-height: 60px;
+  /* line-height: 1.2rem; */
+  /* overflow: hidden; */
   cursor: pointer;
 }
 .hero-btn {
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
-@media screen and (max-width: 1080px) {
-  .hero-desc {
-    font-size: 16px;
-  }
+  gap: 1vw;
+  cursor: pointer;
 }
 /* end of hero section */
 
 /* main section */
 .row-container {
-  padding-left: 3rem;
   background-color: rgb(0, 0, 0);
 }
 .row-section {
   white-space: nowrap;
 }
 .row-heading {
-  font-size: 1.5rem;
-  padding: 1rem 0;
+  font-size: 2vw;
   color: white;
   cursor: pointer;
   display: block;
+  cursor: pointer;
+  display: inline-block;
+  /* margin: 1rem auto; */
 }
 .row-slide {
+  padding-left: 1vw;
   overflow-x: scroll;
-}
-.card-container {
-  /* display: grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(6, 1fr); */
-  display: inline-block;
-  max-width: 15%;
-  padding: 1rem 0;
 }
 .row-slide::-webkit-scrollbar {
   display: none;
 }
-.row-card {
-  width: 100%;
-  border-radius: 4px;
-  cursor: pointer;
+.card-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1vw 0;
+}
+.card-img {
+  max-width: 15%;
   display: inline-block;
-  padding-right: 5px;
-}
-.row-card > img {
   border-radius: 4px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   cursor: pointer;
 }
-.row-card:hover > img {
-  transform: scale(1.2);
-  transition: all 0.2s;
+.card-img:hover {
+  transform: scale(1.04);
+  transition: all 0.1s;
 }
-@media screen and (max-width: 1080px) {
-  .card-container {
+@media screen and (max-width: 900px) {
+  .card-img {
     max-width: 20%;
+  }
+  .card-container {
+    gap: 0.4rem;
   }
 }
 @media screen and (max-width: 768px) {
+  .card-img {
+    max-width: 25%;
+  }
   .card-container {
-    max-width: 40%;
+    gap: 0.3rem;
   }
 }
