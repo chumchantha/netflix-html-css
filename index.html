@@ -40,7 +40,7 @@
       <div class="hero-left container-width">
         <div class="hero-container">
           <div class="title-logo">
-            <img src="/src/title-logo.png" alt="title logo" />
+            <img src="/src/hero/logo/20th.png" alt="title logo" />
           </div>
           <p class="hero-desc">
             A teen girl has her eyes set on a boy for her lovesick best friend.
@@ -234,6 +234,7 @@
     <!-- end of main section -->
 
     <script>
+      // nav scroll
       function getScrollPosition() {
         return (
           window.pageYOffset ||
@@ -251,6 +252,40 @@
         } else {
           nav.classList.remove("nav-scrolled"); // remove the scrolled class if not scrolled
         }
+      });
+      // end nav scroll
+
+      // hero random img
+      const hero = [
+        {
+          titleLogo: "src/hero/logo/20th.png",
+          desc: " A teen girl has her eyes set on a boy for her lovesick best friend. However, things become complicated when she falls in love and is forced to choose between love and friendship. ",
+          img: "url('src/hero/img/20th.jpg')",
+        },
+        {
+          titleLogo: "src/hero/logo/vincenzo.png",
+          desc: " An Italian lawyer and Mafia consigliere of Korean descent. He is the adopted son of the late boss of the Cassano Family and Geumga Plaza's true owner. ",
+          img: "url('src/hero/img/vincenzo.jpeg')",
+        },
+        {
+          titleLogo: "src/hero/logo/king.png",
+          desc: " Korean emperor Lee Gon tries to close the doors to a parallel world which was opened by demons; a detective tries to protect the people and the one she loves. ",
+          img: "url('src/hero/img/king.jpg')",
+        },
+      ];
+      const titleLogo = document.querySelector(".title-logo >img");
+      const heroDesc = document.querySelector(".hero-desc");
+      const bgImg = document.querySelector(".hero");
+      console.log(bgImg);
+      function showingHero(p) {
+        titleLogo.src = hero[p].titleLogo;
+        heroDesc.textContent = hero[p].desc;
+        bgImg.style.backgroundImage = hero[p].img;
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const random = Math.floor(Math.random() * hero.length);
+        showingHero(random);
       });
     </script>
   </body>
